@@ -1,6 +1,15 @@
-<div class="card" style="width: 10rem;">
-  <img class="card-img-top" src="https://placehold.it/256x180" alt="Card image cap">
-  <div class="card-body">
-
+<div class="mb-3 col-md-4 col-sm-4 col-lg-4 float-left" *ngFor="let product of products">
+  <div class="card" style="width: 15rem;">
+    <img class="card-img-top" [src]="imgUrl" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title float-right">{{product.price}}</h5>
+        <h5>
+            <a class="card-link" href="#">{{product.title}}</a>
+        </h5>
+        <p class="card-text uk-pull-1-2">{{product.desc}}</p>
+    </div>
+    <div style="margin-left: 20px">
+      <app-stars [rating]="product.rating"></app-stars>
+    </div>
   </div>
 </div>
