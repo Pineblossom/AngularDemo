@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 <div class="mb-3 col-md-4 col-sm-4 col-lg-4 float-left" *ngFor="let product of products">
   <div class="card" style="width: 15rem;">
     <img class="card-img-top" [src]="imgUrl" alt="Card image cap">
     <div class="card-body">
         <h5 class="card-title float-right">{{product.price}}</h5>
         <h5>
-            <a class="card-link" href="#">{{product.title}}</a>
+             <a [routerLink]="[ '/product', product.title ]">{{product.title}}</a>
         </h5>
         <p class="card-text uk-pull-1-2">{{product.desc}}</p>
     </div>
@@ -14,8 +13,4 @@
     </div>
   </div>
 </div>
-=======
-<p>
-  product works!
-</p>
->>>>>>> 83c8275fcaeb0b8e4f7de632c938360483304a5c
+
